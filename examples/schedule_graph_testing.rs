@@ -1,12 +1,13 @@
 #![allow(unused)]
 use std::{collections::BTreeSet, path::PathBuf};
 
-use bevy::{prelude::*, render::RenderApp, utils::HashSet};
+use bevy::{prelude::*, render::RenderApp};
 use bevy_ecs::{
     component::ComponentId,
     schedule::{NodeId, ScheduleLabel},
 };
 use bevy_mod_debugdump::schedule_graph::Settings;
+use bevy_platform::collections::hash_set::HashSet;
 
 #[derive(ScheduleLabel, Clone, Debug, PartialEq, Eq, Hash)]
 struct ScheduleDebugGroup;
